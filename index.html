@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Nunito:wght@300&family=Yellowtail&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Bruno Almeida</title>
+
+</head>
+<body id="topo">
+
+	<nav>
+		<a href="#body">Bruno Almeida</a>
+		<ul>
+			<li><a href="#sobre"> Sobre </a></li>
+			<li><a href="#interesses"> Interesses </a></li>
+			<li><a href="#contato"> Contato </a></li>
+
+		<div class= "search">
+          <h5 class="card-header">Pesquisar</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquisar por...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">IR!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+		</ul>
+
+	</nav>
+
+	<header> 
+		<h1>Bruno Almeida</h1>
+		<p></p>
+		
+		<div id="tela">
+			
+		</div>
+		<script>
+		function success(){
+			let obj = JSON.parse(this.responseText);
+			let texto = (`<br>Login: ${obj.login} <br> ${obj.bio} <br> ${obj.avatar_url}`);
+			document.getElementById('tela').innerHTML = texto;
+		}
+		function error(err) { console.log('Erro:', err);}
+		var xhr = new XMLHttpRequest();
+		xhr.onload = success;
+		xhr.onerror = error;
+		xhr.open('GET', 'https://api.github.com/users/bhamnoal');
+		xhr.send();
+
+	</script>
+
+		<a href="#sobre"> Ver mais </a>
+	</header>
+	<section id="interesses">
+		<h2> Interesses </h2>
+		
+		<div>
+			<img src="img/musica.png" alt="Musica">
+			<h3> Músicas </h3>
+		</div>
+
+		<div>
+			<img src="img/livros.jpg" alt="Livros">
+			<h3> Livros </h3>
+		</div>
+
+		<div>
+			<img src="img/quadrinhos.png" alt="Quadrinhos">
+			<h3> Quadrinhos </h3>
+		</div>
+
+	</section>
+
+	<section id="contato">
+		<h2> Contato </h2>
+		<div>
+			<img src="img/tel.png" alt="telefone">
+			<p><a href="tel:31982623437"> (31) 98262-3437</a></p>
+		</div>
+		<div>
+			<img src="img/mail.png" alt="Mail">
+			<p><a href="mailto: oalmeidabruno@gmail.com"> oalmeidabruno@gmail.com</a></p>
+		</div>
+
+	</section>
+
+	<footer>
+		<a href="#topo"> VOLTAR</a>
+		<p> Desenvolvido por Bruno Almeida :)</p>
+
+	</footer>
+
+
+
+</body>
+</html>
