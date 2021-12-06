@@ -1,0 +1,15 @@
+GET /users/bhamnoal HTTP/1.1
+Host: api.github.com
+
+GET /users/publicapis/repos
+Host: api.github.com
+
+GET /users/danistefanovic/repos
+Host: api.github.com
+
+GET /users/jwasham/repos
+Host: api.github.com
+
+GET /search/users
+Host: api.github.com
+
